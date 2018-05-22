@@ -1,51 +1,107 @@
 <template>
-  <div class="main-page-view">
-      <div class="main-page-view-sub-1">
-       <div class="menu-contain">a</div>
-       <div class="menu-contain">b</div>
-       <div class="menu-contain">c</div>
-       <div class="menu-contain">d</div>
-       <div class="menu-contain">e</div>
-      </div>
-      <div>
-        Hello World!
-      </div>
+  <div class="page-container">
+    <md-app md-waterfall md-mode="fixed-last">
+      <md-app-toolbar class="md-color">
+        <div class="md-toolbar-row">
+          <div class="md-toolbar-section-start">
+            <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
+              <md-icon>menu</md-icon>
+            </md-button>
+  
+            <span class="md-title">강상운의 포토폴리오</span>
+          </div>
+  
+          <div class="md-toolbar-section-end">
+            <md-button class="md-icon-button">
+              <md-icon>more_vert</md-icon>
+            </md-button>
+          </div>
+        </div>
+
+      </md-app-toolbar>
+  
+      <md-app-drawer :md-active.sync="menuVisible">
+        <md-toolbar class="md-transparent" md-elevation="0">Navigation</md-toolbar>
+  
+        <md-list>
+          <md-list-item>
+            <md-icon>move_to_inbox</md-icon>
+            <span class="md-list-item-text">Inbox</span>
+          </md-list-item>
+  
+          <md-list-item>
+            <md-icon>send</md-icon>
+            <span class="md-list-item-text">Sent Mail</span>
+          </md-list-item>
+  
+          <md-list-item>
+            <md-icon>delete</md-icon>
+            <span class="md-list-item-text">Trash</span>
+          </md-list-item>
+  
+          <md-list-item>
+            <md-icon>error</md-icon>
+            <span class="md-list-item-text">Spam</span>
+          </md-list-item>
+        </md-list>
+      </md-app-drawer>
+  
+      <md-app-content>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique,
+          quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+      </md-app-content>
+    </md-app>
   </div>
 </template>
 
-<script>
-export default {};
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
-.main-page-view {
+<style lang="scss" scoped>
+.md-app {
   height: 100vh;
-  display: grid;
-  grid-template-columns: 0.1fr 0.9fr;
+  border: 1px solid rgba(#000, 0.12);
 }
-
-.main-page-view > div:nth-child(1) {
-  display: grid;
-  grid-template-rows: repeat(5, 20%);
+.md-color {
+  background: rgb(224, 90, 90);
 }
-.menu-contain {
-  background: blue;
-  width: 100%;
-  transition: width 0.5s;
-}
-.menu-contain:hover {
-  width: 200%;
-}
-.menu-contain:hover ~ .menu-contain {
-  width: 50%;
-}
-
-.main-page-view > div:nth-child(2) {
-  padding: 10%;
-  text-align: right;
-  font-family: "Nanum Gothic", sans-serif;
-  font-size: 7vw;
+// Demo purposes only
+.md-drawer {
+  width: 230px;
+  max-width: calc(100vw - 125px);
 }
 </style>
+
+<script>
+export default {
+  name: "LastRowFixed",
+  data: () => ({
+    menuVisible: false
+  })
+};
+</script>
