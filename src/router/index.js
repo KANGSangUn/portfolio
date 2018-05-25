@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.min.css'
-import 'vue-material/dist/theme/default.css' // This line here
+import feather from 'vue-icon'
+Vue.use(feather, 'v-icon')
+// This line here
 Vue.use(Router);
-Vue.use(VueMaterial);
+
 //vue 라이브러리 setting
 
 

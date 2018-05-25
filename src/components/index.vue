@@ -1,158 +1,163 @@
 <template>
-  <div class="page-container" id="page">
-    <md-app md-waterfall md-mode="fixed-last">
-      <md-app-toolbar class="md-color">
-        <div class="md-toolbar-row">
-          <div class="md-toolbar-section-start">
-            <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
-              <md-icon>menu</md-icon>
-            </md-button>
-  
-            <span class="md-title">강상운의 포토폴리오</span>
-          </div>
-  
-          <div class="md-toolbar-section-end">
-            <md-button class="md-icon-button">
-            
-            </md-button>
+  <div class="main-layout">
+      <div class="ks-header">
+        <v-icon class="icon" name="align-justify" style="color:white"></v-icon>
+      </div>
+      <div class="ks-layout">
+        <div id="ks-layout-sub-1">
+          <div id="ks-layout-sub-1-1">
+            <v-icon class="icon" name="instagram"></v-icon>
+            <v-icon class="icon" name="facebook"></v-icon>
+            <v-icon class="icon" name="github"></v-icon>
+            <v-icon class="icon" name="mail"></v-icon>
           </div>
         </div>
+        <div id="ks-layout-sub-2">
+        </div>
+        <div id="ks-layout-sub-3">
+          <div id="ks-layout-sub-3-1">
+              <div>
+                <p>KANG SANG UN</p>
+                <p>PORTFOLIO</p>
+                <p>V 1.0</p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class='ks-layout-2'>
+          <div  class="ks-layout-2-1">
+              <p>私は</p>
+              <p>スキル</p>
+              <p>プロジェクト</p>
+              <p>夢</p>
+          </div>
+          <div class="ks-layout-2-2">
+            <div class="ks-layout-2-2-1">
+            </div>
+            <div class="ks-layout-2-2-2">
+             <p>名前：カン・サンウン</p>      
+             <p>学校：ヨンジン専門大学</p>   
+             <p>歳：23歳</p>   
+             <p>専攻：プログラミング</p> 
+             <p>趣味：旅行</p>                 
+            </div>
+          </div>
+      </div>
+      <div class="ks-footer">
 
-      </md-app-toolbar>
-  
-      <md-app-drawer :md-active.sync="menuVisible">
-        <md-toolbar class="md-transparent" md-elevation="0">Navigation</md-toolbar>
-  
-        <md-list>
-          <md-list-item>
-            <md-icon>move_to_inbox</md-icon>
-            <span class="md-list-item-text">自分</span>
-          </md-list-item>
-  
-          <md-list-item>
-            <md-icon>send</md-icon>
-            <span class="md-list-item-text">プロジェクト</span>
-          </md-list-item>
-  
-          <md-list-item>
-            <md-icon>delete</md-icon>
-            <span class="md-list-item-text">夢</span>
-          </md-list-item>
-  
-          <md-list-item>
-            <md-icon>error</md-icon>
-            <span class="md-list-item-text">INFO</span>
-          </md-list-item>
-        </md-list>
-      </md-app-drawer>
-   
-      <md-app-content class="main-layout">
-        <div class="md-layout">
-          <div class="md-layout-item" id="main-banner-img">
-
-          </div>
-          <div class="md-layout-item" id="main-banner-text">
-            <p>KANG</p>
-            <p>SANG</p>
-            <p>UN</p>
-          </div>
-        </div>
-        <div class="md-layout" id="sub-layout-1-banner">
-          <div class='md-layout-item'>
-            <p>私は</p>
-          </div>
-        </div>
-        <div class="md-layout md-gutter md-alignment-center" id="sub-layout-1-item">
-              <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">
-                <div>아카루이데스</div>
-              </div>
-              <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">
-                <div>료코가 스키데스</div>
-              </div>
-              <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">
-                <div>아나타가 스키데스</div>
-              </div>
-        </div>
-      </md-app-content>
-    </md-app>
+      </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css?family=Londrina+Sketch");
+<style scoped>
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+@import url("https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css");
+.icon {
+  width: 40px;
+  color: rgb(18, 117, 43);
+}
 
-.md-app {
-  width: 100vw;
+.main-layout {
+  width: 100%;
   height: 100vh;
-  border: 1px solid rgba(#000, 0.12);
 }
-.md-color {
+.ks-header {
+  padding: 2vh;
+  width: 100%;
+  position: fixed;
   background: transparent;
-}
-// Demo purposes only
-.md-drawer {
-  width: 230px;
-  max-width: calc(100vw - 125px);
-}
-
-#main-banner-img {
-  background: orange;
-  background-image: url("../assets/images/ksu_main_banner.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-#main-banner-text {
-  padding-right: 5vh;
-  text-align: right;
   color: white;
-  font-size: 20vh;
-  font-family: "Londrina Sketch", cursive;
-  background: orange;
-}
-#sub-layout-1-banner {
-  height: 10vh;
   font-size: 5vh;
   text-align: center;
 }
-#sub-layout-1-item {
-  height: 65vh;
+.ks-header .icon {
+  float: left;
 }
-#sub-layout-1-item .md-layout-item {
-  height: 50vh;
-  transition: 0.3s;
+.ks-layout {
+  background: rgb(9, 2, 24);
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3, 33.3333%);
 }
-#sub-layout-1-item .md-layout-item div {
-  background: orange;
-  height: 100%;
+#ks-layout-sub-1 {
+  display: table;
+  height: inherit;
 }
-@media only screen and (max-width: 600px) {
-  .main-layout {
-    margin: 0;
-    padding: 0;
-  }
-  #main-banner-img {
-    display: none;
-  }
-  #main-banner-text {
-    background-image: url("../assets/images/ksu_main_banner.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    font-size: 7vh;
-  }
-  #sub-layout-1-item .md-layout-item {
-    padding: 0;
-    margin: 0;
-    height: 20vh;
-  }
+#ks-layout-sub-1-1 {
+  padding: 10vh;
+  display: table-cell;
+  vertical-align: bottom;
+}
+#ks-layout-sub-1-1 .icon {
+  margin-right: 5vh;
+}
+#ks-layout-sub-2 {
+  background-size: cover;
+  background-image: url("../assets/images/ksu_main_banner.jpg");
+}
+#ks-layout-sub-3 {
+  display: table;
+  height: inherit;
+}
+#ks-layout-sub-3-1 {
+  padding: 8vh;
+  display: table-cell;
+  vertical-align: middle;
+}
+#ks-layout-sub-3-1 div {
+  font-family: Roboto;
+  border-top: 3px solid yellow;
+  border-bottom: 3px solid yellow;
+  color: white;
+  font-size: 5vh;
+  width: 100%;
+  height: 50%;
+}
+.ks-layout-2 {
+  border-top: 50px solid yellow;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 33.3% 66.6%;
+}
+.ks-layout-2-1 {
+  padding: 5vw;
+  background: rgb(9, 2, 24);
+  color: white;
+  font-weight: 100;
+  font-size: 5vh;
+  font-family: "Rounded Mplus 1c";
+}
+.ks-layout-2-1 p {
+  padding-left: 2vh;
+
+  border-left: 1px solid yellow;
+}
+.ks-layout-2-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 15vh;
+  background: rgb(18, 117, 43);
+}
+.ks-layout-2-2-1 {
+  background-image: url("../assets/images/main_profile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ks-layout-2-2-2 {
+  padding-left: 2vh;
+  color: white;
+  background: rgb(9, 2, 24);
+  font-weight: 100;
+  font-size: 3.5vh;
+  border-right: 50px solid yellow;
+  font-family: "Rounded Mplus 1c";
+}
+.ks-footer {
+  width: 100%;
+  height: 30%;
+  background: rgb(9, 2, 24);
 }
 </style>
 
 <script>
-export default {
-  name: "LastRowFixed",
-  name: "LayoutHorizontalResponsive",
-  data: () => ({
-    menuVisible: false
-  })
-};
 </script>
