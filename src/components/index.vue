@@ -1,10 +1,12 @@
 <template>
   <div class="main-layout">
-      <div class="ks-header">
+      <header class="ks-header">
         <v-icon class="icon" name="align-justify" style="color:white"></v-icon>
-      </div>
+      </header>
       <div class="ks-layout">
         <div id="ks-layout-sub-1">
+          <div></div>
+          <div style="background: green"></div>
           <div id="ks-layout-sub-1-1">
             <v-icon class="icon" name="instagram"></v-icon>
             <v-icon class="icon" name="facebook"></v-icon>
@@ -17,9 +19,10 @@
         <div id="ks-layout-sub-3">
           <div id="ks-layout-sub-3-1">
               <div>
-                <p>KANG SANG UN</p>
-                <p>PORTFOLIO</p>
-                <p>V 1.0</p>
+                <p>わたしは</p>
+                <p>幸せを作る</p>
+                <p>エンジニア</p>
+                <p>カン・サンウンです</p>
               </div>
           </div>
         </div>
@@ -39,7 +42,8 @@
              <p>学校：ヨンジン専門大学</p>   
              <p>歳：23歳</p>   
              <p>専攻：プログラミング</p> 
-             <p>趣味：旅行</p>                 
+             <p>趣味：旅行</p>   
+             <p>kokokoko</p>              
             </div>
           </div>
       </div>
@@ -80,13 +84,12 @@
   grid-template-columns: repeat(3, 33.3333%);
 }
 #ks-layout-sub-1 {
-  display: table;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   height: inherit;
 }
 #ks-layout-sub-1-1 {
-  padding: 10vh;
-  display: table-cell;
-  vertical-align: bottom;
+  margin: auto;
 }
 #ks-layout-sub-1-1 .icon {
   margin-right: 5vh;
@@ -105,17 +108,16 @@
   vertical-align: middle;
 }
 #ks-layout-sub-3-1 div {
-  font-family: Roboto;
-  border-top: 3px solid yellow;
-  border-bottom: 3px solid yellow;
-  color: white;
+  font-weight: 100;
   font-size: 5vh;
+  font-family: "Rounded Mplus 1c";
+  color: white;
   width: 100%;
   height: 50%;
 }
 .ks-layout-2 {
   border-top: 50px solid yellow;
-  height: 80%;
+  height: 100%;
   display: grid;
   grid-template-columns: 33.3% 66.6%;
 }
@@ -129,7 +131,6 @@
 }
 .ks-layout-2-1 p {
   padding-left: 2vh;
-
   border-left: 1px solid yellow;
 }
 .ks-layout-2-2 {
